@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="sup">
+  <head>
+    <meta charset="utf-8">
+    <title>hello</title>
+<link rel="stylesheet" href="https://bootswatch.com/solar/bootstrap.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+    </script>
+  </head>
+  <body ng-controller="MoviesController as $ctrl">
+
+    <h1>{{$ctrl.motd}}</h1>
+
+    <form>
+      <div class="">
+        <input type="text" ng-model="cheese" value="">
+      </div>
+      <h1>{{cheese}}</h1>
+    <button class="btn-success" name="button" ng-submit="">submit</button>
+   </form>
+   <test></test>
+
+    <script type="text/javascript" src="app.js">
+    </script>
+    <script type="text/javascript" src="/movies/movies.controller.js">
+    </script>
+  </body>
+</html>

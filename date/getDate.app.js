@@ -1,7 +1,7 @@
 angular.module('lessonOne')
-  .controller('Late', Late)
+  .controller('GetDate', GetDate)
 
-function Late() {
+function GetDate() {
   const vm = this
 
   vm.$onInit = function() {

@@ -1,11 +1,17 @@
-<h1>{{$ctrl.myNumber | number:2}}</h1>
-<div ng-repeat="user in $ctrl.users | orderBy:'age'">
+<h1>{{$ctrl.myNumber | number:2}}</hp>
+<select ng-model="$ctrl.propertyToOrderBy">
+  <option value="name">Name</option>
+  <option value="dog">Dog</option>
+</select>
+
+<div ng-repeat="user in $ctrl.users | orderBy:$ctrl.propertyToOrderBy">
 
 
-<h1>{{user.name}} {{user.age}}</h1>
+<p>{{user.name}} {{user.dog}}</p>
+  <a href="#" ng-click="$ctrl.deleteUser($event, cheese)">❌</a>
 </div>
 <form ng-submit="$ctrl.addUser()">
   <input ng-model="$ctrl.user.name" placeholder="Enter a name" />
-  <input ng-model="$ctrl.user.age" placeholder="Enter an age" />
+  <input ng-model="$ctrl.user.dog" placeholder="Enter your dog" />
   <input type="submit">
 </form>

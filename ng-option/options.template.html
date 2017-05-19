@@ -1,0 +1,45 @@
+<h1>Options</h1>
+<!-- <div ng-controller="ExampleController"> -->
+  <ul>
+    <li ng-repeat="color in $ctrl.colors">
+      <label>Name: <input ng-model="color.name"></label>
+      <label><input type="checkbox" ng-model="color.notAnOption"> Disabled?</label>
+      <button ng-click="$ctrl.remove(color)">X</button>
+    </li>
+    <li>
+      <button ng-click="$ctrl.add()">add</button>
+    </li>
+  </ul>
+  <hr/>
+  <label>Color (null not allowed):
+    <select ng-model="$ctrl.myColor" ng-options="color.name for color in $ctrl.colors"></select>
+  </label><br/>
+  <label>Color (null allowed):
+  <span  class="nullable">
+    <select ng-model="$ctrl.myColor" ng-options="color.name for color in $ctrl.colors">
+      <option value="">-- choose color --</option>
+    </select>
+  </span></label><br/>
+
+  <label>Color grouped by shade:
+    <select ng-model="$ctrl.myColor" ng-options="color.name group by color.shade for color in $ctrl.colors">
+    </select>
+  </label><br/>
+
+  <label>Color grouped by shade, with some disabled:
+    <select ng-model="$ctrl.myColor"
+          ng-options="color.name group by color.shade disable when color.notAnOption for color in $ctrl.colors">
+    </select>
+  </label><br/>
+
+
+
+  Select <button ng-click="$ctrl.myColor = { name:'not in list', shade: 'other' }">bogus</button>.
+  <br/>
+  <hr/>
+  <input ng-model="$ctrl.myColor.name">
+  Currently selected: {{ $ctrl.myColor.name}}
+  <div style="border:solid 1px black; height:20px"
+       ng-style="{'background-color':$ctrl.myColor.name}">
+  </div>
+<!-- </div> -->

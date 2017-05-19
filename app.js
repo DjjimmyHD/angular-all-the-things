@@ -4,5 +4,8 @@ angular.module('app', [
   'app.cars',
   'app.repeater',
   'app.iffy',
-  'app.filters'
+  'app.filters',
+  'app.options'
+
+
 ])

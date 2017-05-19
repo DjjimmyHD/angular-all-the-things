@@ -1,0 +1,9 @@
+<div ng-repeat="cheese in $ctrl.users">
+       <strong>{{ cheese.name }}</strong>: {{ cheese.age }}
+        <a href="#" ng-click="$ctrl.deleteUser($event, cheese)">❌</a>
+     </div>
+     <form ng-submit="$ctrl.addUser()">
+       <input ng-model="$ctrl.cheese.name" placeholder="Enter a name" />
+       <input ng-model="$ctrl.cheese.age" placeholder="Enter an age" />
+       <input type="submit">
+     </form>

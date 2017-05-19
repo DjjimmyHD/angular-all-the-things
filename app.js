@@ -1,5 +1,6 @@
 angular.module('app', [
   'app.currentDate',
   'app.name',
-  'app.cars'
+  'app.cars',
+  'app.repeater'
 ])

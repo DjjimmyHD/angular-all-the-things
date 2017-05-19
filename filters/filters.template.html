@@ -1,0 +1,11 @@
+<h1>{{$ctrl.myNumber | number:2}}</h1>
+<div ng-repeat="user in $ctrl.users | orderBy:'age'">
+
+
+<h1>{{user.name}} {{user.age}}</h1>
+</div>
+<form ng-submit="$ctrl.addUser()">
+  <input ng-model="$ctrl.user.name" placeholder="Enter a name" />
+  <input ng-model="$ctrl.user.age" placeholder="Enter an age" />
+  <input type="submit">
+</form>

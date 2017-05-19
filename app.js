@@ -3,5 +3,6 @@ angular.module('app', [
   'app.name',
   'app.cars',
   'app.repeater',
-  'app.iffy'
+  'app.iffy',
+  'app.filters'
 ])

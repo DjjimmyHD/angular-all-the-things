@@ -1,6 +1,10 @@
-<form ng-submit="$ctrl.createCar()">
+<h1>MADE IT</h1>
+<form ng-submit="$ctrl.deleteCar()">
+        <label for="">Make of Car</label>
         <input type="text" ng-model="$ctrl.car.make" />
+        <label for="">Year of Car</label>
         <input type="text" ng-model="$ctrl.car.year" />
         <input type="submit">
       </form>
+      <h4>Cars json object</h4>
 {{$ctrl.car | json}}

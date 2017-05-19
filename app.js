@@ -1,5 +1,5 @@
-angular.module('lessonOne', [])
-.component('greeting', {
-           controller: 'GetDate',
-           templateUrl: '/date/getDate.template.html'
-   })
+angular.module('app', [
+  'app.currentDate',
+  'app.name',
+  'app.cars'
+])

@@ -1,7 +1,7 @@
-angular.module('lessonOne')
-  .controller('GetDate', GetDate)
+angular.module('app.currentDate')
+  .controller('CurrentDate', CurrentDate)
 
-function GetDate() {
+function CurrentDate() {
   const vm = this
 
   vm.$onInit = function() {

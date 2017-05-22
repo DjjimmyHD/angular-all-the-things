@@ -1,0 +1,34 @@
+<form novalidate name="sampleForm" class="form">
+  <div class="form-group" ng-class="{
+      'has-success' : sampleForm.username.$valid,
+      'has-error' : sampleForm.username.$error
+    }">
+    <label class="control-label" for="username">Username</label>
+    <input ng-model="user.username" required minlength="3" ng-maxlength=20 type="text" class="form-control" name="username" id="username">
+    <span ng-show="sampleForm.username.$error.required">Your name is required </span>
+    <span ng-show="sampleForm.username.$error.minlength" class="help-block">Username must be at least 3 characters long</span>
+    <span ng-show="sampleForm.username.$error.maxlength" class="help-block">Username cannot be longer than 20 characters</span>
+  </div>
+  <div class="form-group" ng-class="{
+      'has-success' : sampleForm.firstName.$valid,
+      'has-error' : sampleForm.firstName.$error
+    }">
+    <label class="control-label" for="firstName">First Name</label>
+    <input ng-model="firstName" required minlength="3" ng-maxlength=20 type="text" class="form-control" name="firstName" id="firstName">
+    <span ng-show="sampleForm.firstName.$error.required">First name is required </span>
+    <span ng-show="sampleForm.firstName.$error.minlength" class="help-block">First name must be at least 3 characters long</span>
+    <span ng-show="sampleForm.firstName.$error.maxlength" class="help-block">First name cannot be longer than 20 characters</span>
+
+</div>
+<div class="form-group" ng-class="{
+    'has-success' : sampleForm.age.$valid,
+    'has-error' : sampleForm.age.$error
+  }">
+  <label class="control-label" for="age">Age</label>
+  <input ng-model="age" required min="18" type="number" class="form-control" name="age" id="age">
+  <span ng-show="sampleForm.age.$error.required">Age is required </span>
+  <span ng-show="sampleForm.age.$error.min" class="help-block">Must be 18 or older</span>
+
+</div>
+
+</form>

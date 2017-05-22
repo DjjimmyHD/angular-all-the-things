@@ -5,7 +5,8 @@ angular.module('app', [
   'app.repeater',
   'app.iffy',
   'app.filters',
-  'app.options'
+  'app.options',
+  'app.forms'
 
 
 ])
